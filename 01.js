@@ -4,7 +4,7 @@ document.addEventListener('DOMContentLoaded', function () {
 function validateEmail() {
     // 取得輸入元素與父容器
     let emailInput = document.getElementById('email-input');
-    let validatorSection = document.querySelector('.validator-section');
+    let emailValidatorSection = document.querySelector('.email-validator-section');
 
     // 建立新的訊息容器
     let validationMessage = document.createElement('div');
@@ -31,5 +31,29 @@ function validateEmail() {
         validationMessage.innerText = "電子郵件格式不正確"
         validationMessage.classList.add("invalid")
     }
-    validatorSection.appendChild(validationMessage);
+    emailValidatorSection.appendChild(validationMessage);
+}
+
+function validatePhone() {
+    // 取得輸入元素與父容器
+    let phoneInput = document.getElementById('phone-input');
+    let validatorSection = document.querySelector('.phone-validator-section');
+
+    // 建立新的訊息容器
+    let validationMessage = document.createElement('div');
+    validationMessage.classList.add('phone-validation-message');
+    validationMessage.classList.add('validation-message');
+
+    // 清除之前的訊息
+    let existingMessage = document.querySelector('.phone-validation-message');
+    if (existingMessage) {
+        existingMessage.remove();
+    }
+
+    // 去除多餘空白，取得輸入值
+    let phoneInputValue = phoneInput.value.trim();
+
+     // 手機號碼正規表達式
+     let phonePattern = /^09\d{8}$/;
+     
 }

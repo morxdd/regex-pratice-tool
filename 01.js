@@ -55,5 +55,15 @@ function validatePhone() {
 
      // 手機號碼正規表達式
      let phonePattern = /^09\d{8}$/;
+
+     // 驗證輸入值並設置訊息內容與樣式
+     if (phonePattern.test(phoneInputValue)) {
+        validationMessage.innerHTML = "手機號碼格式正確"
+        validationMessage.classList.add("valid")
+     } else {
+        validationMessage.innerText = "手機號碼格式不正確"
+        validationMessage.classList.add("invalid")
+    }
+    validatorSection.appendChild(validationMessage);
      
 }

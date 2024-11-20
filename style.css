@@ -1,6 +1,20 @@
-.validation-message {
-    height: 12px;
+* {
+    margin: 0;
+    padding: 0;
 }
 .validator-section {
     height: 120px;
+}
+.result {
+    height: 12px;
+
+}
+
+.password-validator-section {
+    height: 140px;
+}
+#password-message {
+    font-size: 14px;
+    color: #666;
+
 }

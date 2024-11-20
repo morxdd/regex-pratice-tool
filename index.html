@@ -14,28 +14,31 @@
         <h2>電子郵件驗證</h2>
         <input type="text" id="email-input" placeholder="輸入電子郵件" autocomplete="off">
         <button onclick="validateEmail()">驗證電子郵件</button>
-        <p id="email-result"></p>
+        <p id="email-result" class="result"></p>
     </div>
 
     <div class="phone-validator-section validator-section">
         <h2>台灣手機號碼驗證</h2>
         <input type="text" id="phone-input" placeholder="輸入台灣手機號碼" autocomplete="off">
         <button onclick="validatePhone()">驗證手機號碼</button>
-        <p id="phone-result"></p>
+        <p id="phone-result" class="result"></p>
     </div>
 
     <div class="card-validator-section validator-section">
         <h2>信用卡號碼遮罩</h2>
         <input type="text" id="card-input" placeholder="輸入信用卡號碼" autocomplete="off">
         <button onclick="maskCreditCard()">遮罩信用卡號碼</button>
-        <p id="card-result"></p>
+        <p id="card-result" class="result"></p>
     </div>
 
-    <div class="validator-section">
+    <div class="password-validator-section validator-section">
         <h2>密碼強度驗證</h2>
         <input type="text" id="password-input" placeholder="輸入密碼" autocomplete="off">
         <button onclick="validatePassword()">驗證密碼強度</button>
-        <p id="password-result"></p>
+        <p id="password-message">
+            *需至少8個字符<br>
+        </p>
+        <p id="password-result" class="result"></p>
     </div>
 
     <div class="validator-section">
